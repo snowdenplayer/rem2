@@ -627,7 +627,18 @@ body {
 
 @media screen and (max-width: 1024px) {
   .our {
+    position: relative;
     background-size: cover;
+  }
+  .our::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
   }
   .our__container {
     -webkit-box-align: center;
@@ -635,9 +646,12 @@ body {
             align-items: center;
   }
   .our__logo {
+    z-index: 3;
     color: #fff;
-    background-color: #fff;
-    background-color: rgba(254, 196, 29, 0.5);
+    text-align: center;
+  }
+  .our__button {
+    z-index: 3;
   }
   .our__button .our__link {
     color: #fff;
