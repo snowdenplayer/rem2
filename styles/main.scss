@@ -220,6 +220,13 @@ body{
         }
         &__logo{
             color: #fff;
+            background-color: #fff;
+            background-color:rgba(254, 196, 29, 0.5);
+        }
+        &__button{
+            .our__link{
+                color: #fff;
+            }
         }
     }
 }
