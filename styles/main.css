@@ -975,6 +975,9 @@ body {
   .footer__info .footer__media-items {
     margin-left: 10px;
   }
+  .footer__info .footer__logo {
+    width: 100px;
+  }
 }
 
 /*end footer*/
