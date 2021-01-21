@@ -885,6 +885,7 @@ body {
 
 .footer__info .footer__logo {
   width: 100px;
+  height: 100%;
 }
 
 .footer__info .media__item img {
