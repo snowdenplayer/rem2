@@ -390,7 +390,6 @@ body {
   }
   .container__header {
     font-size: 40px;
-    margin-bottom: 0px;
   }
 }
 
@@ -825,6 +824,7 @@ body {
   }
   .experience__header {
     color: #fff;
+    margin-bottom: 0px;
   }
   .experience__boxes {
     -webkit-box-orient: vertical;
