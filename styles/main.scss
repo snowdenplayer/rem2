@@ -483,10 +483,20 @@ body{
                 margin-left: 10px;
             }
             .footer__logo{
-                width: 100px;
+                max-width: 100px;
             }
     }
 }
+}
+@media screen and (max-width: 389px){
+    .footer{
+        &__info{
+            width: 100%;
+        }
+        &__contacts{
+            display: none;
+        }
+    }
 }
 /*end footer*/
 

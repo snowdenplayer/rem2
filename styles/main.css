@@ -976,7 +976,16 @@ body {
     margin-left: 10px;
   }
   .footer__info .footer__logo {
-    width: 100px;
+    max-width: 100px;
+  }
+}
+
+@media screen and (max-width: 389px) {
+  .footer__info {
+    width: 100%;
+  }
+  .footer__contacts {
+    display: none;
   }
 }
 
