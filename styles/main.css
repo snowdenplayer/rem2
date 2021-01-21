@@ -390,6 +390,7 @@ body {
   }
   .container__header {
     font-size: 40px;
+    margin-bottom: 0px;
   }
 }
 
@@ -843,7 +844,7 @@ body {
 /*footer*/
 .footer {
   width: 100%;
-  height: 150px;
+  height: 120px;
   background-color: #252527;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -952,6 +953,28 @@ body {
 
 .footer__contacts-email {
   margin-top: 10px;
+}
+
+@media screen and (max-width: 830px) {
+  .footer__menu-list {
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__menu-list li {
+    margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .footer__menu-list {
+    display: none;
+  }
+  .footer__media-items {
+    margin-left: 10px;
+  }
 }
 
 /*end footer*/
