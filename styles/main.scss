@@ -457,9 +457,6 @@ body{
             font-family: 'OpenSansBold',sans-serif;
 
         }
-        &-number{
-
-        }
         &-email{
             margin-top: 10px;
         }
@@ -472,7 +469,8 @@ body{
             flex-direction: column;
             li{
                 margin: 5px 0;
-            }         }
+            }         
+        }
     }
 }
 @media screen and (max-width: 640px){
@@ -480,10 +478,12 @@ body{
         &__menu-list{
             display: none;
         }
-        &__media-items{
-            margin-left: 10px;
-        }
+        &__info{
+            .footer__media-items{
+                margin-left: 10px;
+            }
     }
+}
 }
 /*end footer*/
 

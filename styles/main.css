@@ -972,7 +972,7 @@ body {
   .footer__menu-list {
     display: none;
   }
-  .footer__media-items {
+  .footer__info .footer__media-items {
     margin-left: 10px;
   }
 }
