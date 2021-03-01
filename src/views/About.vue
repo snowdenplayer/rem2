@@ -1,6 +1,11 @@
 <template>
   <div class="about">
+
     <div class="container">
+      <viewCardGrid
+          :data="imgArr">
+
+      </viewCardGrid>
       <div class="wrap__menu">
         <ul class="menu">
           <li
@@ -13,10 +18,7 @@
           </li>
         </ul>
       </div>
-    <viewCardGrid
-        :data="imgArr">
 
-    </viewCardGrid>
     </div>
   </div>
 </template>
@@ -33,32 +35,32 @@ export default {
           {
             id: 1,
             pathImg: require('../assets/images/svg/icon1.svg'),
-            text: '5 років досвіду в нашій справі'
+            text: '3 роки досвіду в нашій справі'
           },
           {
             id: 2,
             pathImg: require('../assets/images/svg/icon2.svg'),
-            text: 'Якість і сроки виконання'
+            text: 'Якість і терміни виконання'
           },
           {
             id: 3,
             pathImg: require('../assets/images/svg/icon3.svg'),
-            text: 'Всі процеси беремо на себе'
+            text: 'Усі процеси беремо на себе'
           },
           {
             id: 4,
             pathImg: require('../assets/images/svg/icon4.svg'),
-            text: '30 квартир під ключ'
+            text: 'Робимо квартири під ключ'
           },
           {
             id: 5,
             pathImg: require('../assets/images/svg/icon5.svg'),
-            text: 'Відсутність вінансових ризиків'
+            text: 'Відсутність фінансових ризиків'
           },
           {
             id: 6,
             pathImg: require('../assets/images/svg/icon6.svg'),
-            text: '5 років гарантії'
+            text: 'Даємо гарантію'
           },
         ]
     }

@@ -6,7 +6,7 @@
           <div class="our__logo">Ремонтна <br> компанія</div>
           <div class="our__text">Робимо Ваші оселі комфортними<br>більше 3-х років</div>
 
-          <div class="our__button"><a href="#" class="our__link">Про нас</a></div>
+          <div class="our__button"><router-link to="/about" class="our__link">Про нас</router-link></div>
         </div>
       </div>
     </section>

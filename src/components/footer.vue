@@ -5,11 +5,15 @@
       <div class="footer__info">
         <img class="footer__logo" src="../assets/images/logo.png" alt="logo">
         <div class="footer__media-items">
-          <div class="media__item facebook"><a href="" target="_blank"><img src="../assets/images/facebook.png" alt=""></a></div>
-          <div class="media__item insta"><a href="" target="_blank"><img src="../assets/images/insta.png" alt=""></a></div>
+          <div class="media__item facebook">
+            <a href="https://www.facebook.com/profile.php?id=100042201940208" target="_blank"><img src="../assets/images/facebook.png" alt=""></a>
+          </div>
+          <div class="media__item insta">
+            <a href="https://instagram.com/dima_voroshyk?igshid=1gsiscnmmrzmr" target="_blank">
+              <img src="../assets/images/insta.png" alt=""></a>
+          </div>
           <div class="media__item viber"><a href="" target="_blank"><img src="../assets/images/viber.png" alt=""></a></div>
           <div class="media__item telegram"><a href="" target="_blank"><img src="../assets/images/telegram.png" alt=""></a></div>
-
         </div>
       </div>
       <div class="footer__menu">
