@@ -12,11 +12,9 @@
       <input type="text" placeholder="Ім'я" name="email" required>
 
       <label for="psw"><b>Телефон</b></label>
-      <input type="tel" placeholder="+380509494349" name="psw" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      <input type="tel" placeholder="+380509494349" name="psw"  required>
+        <button class="submit__button" type="submit" >Відправити</button>
       </form>
-    </div>
-    <div class="popup__footer">
-      <button class="submit__button">Відправити</button>
     </div>
   </div>
 </template>

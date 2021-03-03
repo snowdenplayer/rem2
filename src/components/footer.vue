@@ -3,7 +3,7 @@
   <footer class="footer">
     <div class="container footer__container">
       <div class="footer__info">
-        <img class="footer__logo" src="../assets/images/logo.png" alt="logo">
+        <router-link to="/" tag="div"><img class="footer__logo" src="../assets/images/logo.png" alt="logo"> </router-link>
         <div class="footer__media-items">
           <div class="media__item facebook">
             <a href="https://www.facebook.com/profile.php?id=100042201940208" target="_blank"><img src="../assets/images/facebook.png" alt=""></a>
