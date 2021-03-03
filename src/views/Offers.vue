@@ -1,73 +1,79 @@
 <template>
   <div class="offers">
+    <v-pop-up
+        v-if="isInfoPopUpVisible"
+        @closePopUp="closeModal"
+    />
+
     <div class="offers__card"
-         v-for="item in offersArray"
+         v-for="(item,index) in offersArray"
          :key="item.id"
     >
-      <div class="offers__card-right" v-if="item.direction === 'right'">
-      </div>
-      <div class="offers__card-left" >
-        <div class="offers__card-left__header">
-          <h1>{{item.title}}</h1>
+      <div class="wrap__card"
+           :style="[
+               index !== offersArray.length-1 ? `background: linear-gradient(to ${item.direction}, #fec41d, #fff`: lastChild ,
+
+               ]"
+
+      >
+        <div class="offers__card-right"
+             :style="`background-image: url(${item.bgImage})`"
+             v-if="item.direction === 'right'">
         </div>
-        <p class="card__text" v-html="item.description" />
-        <button class="card__button">Замовити</button>
+        <div
+            class="offers__card-left"
+            :style="[width <= 960 ? `background-image: url(${item.bgImage})`: 'background: #fff']"
+        >
+          <div class="offers__card-left__header">
+            <h1>{{ item.title }}</h1>
+          </div>
+          <p class="card__text" v-html="item.description"/>
+          <button class="card__button" @click="showPopUpInfo">Замовити</button>
+        </div>
+        <div class="offers__card-right"
+             :style="`background-image: url(${item.bgImage})`"
+             v-if="item.direction === 'left' ">
+        </div>
       </div>
-      <div class="offers__card-right" v-if="item.direction === 'left' ">
-      </div>
+
     </div>
 
   </div>
 </template>
 
 <script>
+import vPopUp from '../components/popup'
+import {offersArray} from '../data/data.offers'
+
 export default {
   name: "Offers",
+  components: {
+    vPopUp
+  },
   data() {
     return {
-      offersArray: [
-        {
-          id: 1,
-          title: "Ремонт квартир",
-          description: `
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid cumque deserunt
-          distinctio dolor dolorum eos est eveniet excepturi exercitationem expedita fugit illo impedit ipsam ipsum
-          labore natus, neque numquam officiis perferendis provident quam quia quidem quisquam quod quos repellendus
-          <br> <br>
-          sequi soluta suscipit temporibus ut vel velit veritatis? Accusantium consectetur corporis delectus, dolorem
-          iusto laboriosam, laudantium modi necessitatibus odio quae quam quis recusandae similique sit tempore
-          `,
-          direction: "left"
-        },
-        {
-          id: 2,
-          title: "Ремонт будинку",
-          description: `
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid cumque deserunt
-          distinctio dolor dolorum eos est eveniet excepturi exercitationem expedita fugit illo impedit ipsam ipsum
-          labore natus, neque numquam officiis perferendis provident quam quia quidem quisquam quod quos repellendus
-          <br> <br>
-          sequi soluta suscipit temporibus ut vel velit veritatis? Accusantium consectetur corporis delectus, dolorem
-          iusto laboriosam, laudantium modi necessitatibus odio quae quam quis recusandae similique sit tempore
-          `,
-          direction: "right"
-        },
-        {
-          id: 3,
-          title: "Ремонт кімнат",
-          description: `
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid cumque deserunt
-          distinctio dolor dolorum eos est eveniet excepturi exercitationem expedita fugit illo impedit ipsam ipsum
-          labore natus, neque numquam officiis perferendis provident quam quia quidem quisquam quod quos repellendus
-          <br> <br>
-          sequi soluta suscipit temporibus ut vel velit veritatis? Accusantium consectetur corporis delectus, dolorem
-          iusto laboriosam, laudantium modi necessitatibus odio quae quam quis recusandae similique sit tempore
-          `,
-          direction: "left"
-        }
-      ]
+      width: window.innerWidth,
+      isInfoPopUpVisible: false,
+      offersArray,
     }
-  }
+  },
+  methods: {
+    showPopUpInfo() {
+      console.log(this.widthScreen)
+      this.isInfoPopUpVisible = true
+    },
+    closeModal() {
+      this.isInfoPopUpVisible = false
+    },
+    updateWidth() {
+      this.width = window.innerWidth;
+    },
+
+  },
+  created() {
+    window.addEventListener('resize', this.updateWidth);
+    console.log(this.width)
+  },
 }
 </script>
 
@@ -77,28 +83,39 @@ h3 {
   color: #fec41d;
 }
 
+.lastChild {
+
+  background: red;
+
+}
+
 .offers {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+
   &__card {
-    height: calc(100vh - 100px);
-    width: 90%;
+    height: calc(100vh);
+    width: 95%;
     display: flex;
 
-    &-left, &-right {
-      height: 100%;
+    .wrap__card {
+      display: flex;
+    }
+
+    .offers__card-left, .offers__card-right {
+      height: calc(100% - 100px);
     }
 
     &-right {
       width: 60%;
-      background-image: url('../assets/images/offers/kvartBuild.jpg');
       background-position: center;
     }
 
     &-left {
+      background: #fff;
       width: 40%;
       display: flex;
       flex-direction: column;
@@ -133,27 +150,17 @@ h3 {
       background: #fec41d;
     }
   }
-
-  &__card:nth-child(2) {
-    .offers__card-right {
-      background-image: url("../assets/images/offers/houseBuild.jpg");
-    }
-  }
-
-  &__card:nth-child(3) {
-    .offers__card-right {
-      background-image: url("../assets/images/offers/kvartBuild1.jpg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
 }
 
-@media screen and (max-width: 895px) {
+@media screen and (max-width: 960px) {
   .offers {
+    .wrap__card {
+      height: 100vh !important;
+      background: transparent !important;
 
-    &__card {
-      height: calc(100vh - 60px);
+
+    .offers__card {
+      height: 100% !important;
       width: 100%;
       overflow: hidden;
 
@@ -164,11 +171,11 @@ h3 {
       &-left {
         width: 100%;
         height: 100%;
-        background-image: url('../assets/images/sectionONas.jpg');
         background-repeat: no-repeat;
         overflow: hidden;
         color: white;
         position: relative;
+
 
         &__header {
           border: 2px solid white;
@@ -193,9 +200,18 @@ h3 {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.25);
+        background-color: rgba(0, 0, 0, 0.5);
         z-index: 1;
       }
+    }
+  }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .offers {
+    &__card {
+      width: 100%;
     }
   }
 }

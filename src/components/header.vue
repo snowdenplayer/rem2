@@ -2,20 +2,31 @@
   <div class="hello">
     <header class="header">
       <div class="header__container container">
-        <div class="header__logo"><img src="../assets/images/logo.png" alt="" class="logo__img"></div>
+        <router-link to="/" tag="div" class="header__logo">
+
+            <img
+                src="../assets/images/logo.png"
+                alt=""
+                class="logo__img">
+
+        </router-link>
         <div class="header__info">
-          <div class="header__contacts__icon"><i class="fas fa-phone"></i></div>
-          <div class="header__burger" @click=" show = !show "  ><i class="fas fa-bars"></i></div>
+          <div class="header__contacts__icon"><a href="tel:+380501553777"><i class="fas fa-phone"></i></a></div>
+          <div
+              class="header__burger"
+              @click=" show = !show ">
+            <i class="fas fa-bars"></i>
+          </div>
           <nav class="header__menu" :class="{active:show}">
-            <ul class="menu-wrap" >
+            <ul class="menu-wrap">
               <li v-for="(menu,index) in headerMenuList" :key="index" @click=" show = !show">
-                <router-link :to="menu.path" class="menu__link" >
-                  {{menu.name}}
+                <router-link :to="menu.path" class="menu__link">
+                  {{ menu.name }}
                 </router-link>
               </li>
             </ul>
           </nav>
-          <button class="header__contact">Контакт</button>
+          <div  class="header__contact"><a href="tel:+380501553777">Контакт</a></div>
         </div>
       </div>
     </header>
@@ -28,22 +39,22 @@ export default {
   props: {
     msg: String
   },
-  data(){
-    return{
-      headerMenuList :[
-        {name: 'Головна',path: '/'},
-        {name: 'Про нас',path: '/about'},
-        {name: 'Проэкти',path: '/projects'},
-        {name: 'Послуги',path: '/offers'},
+  data() {
+    return {
+      headerMenuList: [
+        {name: 'Головна', path: '/'},
+        {name: 'Про нас', path: '/about'},
+        {name: 'Проэкти', path: '/projects'},
+        {name: 'Послуги', path: '/offers'},
       ],
       show: false
     }
   },
-  watch:{
-    show (nv) {
-      if(nv === true){
+  watch: {
+    show(nv) {
+      if (nv === true) {
         document.body.classList.add("disableScroll");
-      }else{
+      } else {
         document.body.classList.remove("disableScroll")
       }
     }
@@ -56,36 +67,42 @@ export default {
 
 .container {
   width: 1200px;
-  &__header{
+
+  &__header {
     font-size: 60px;
     font-family: Arial, Helvetica, sans-serif;
   }
 }
-@media (max-width: 1366px){
+
+@media (max-width: 1366px) {
   .container {
     width: 992px;
   }
 }
-@media (max-width: 1024px){
+
+@media (max-width: 1024px) {
   .container {
     width: 768px;
   }
 }
-@media (max-width: 798px){
+
+@media (max-width: 798px) {
   .container {
     width: 90%;
 
-    &__header{
+    &__header {
       font-size: 40px;
     }
   }
 }
-@media (max-width: 520px){
+
+@media (max-width: 520px) {
   .container {
     padding: 0 10px;
     width: 98%;
   }
 }
+
 /*header*/
 .header {
   position: fixed;
@@ -93,7 +110,8 @@ export default {
   justify-content: center;
   width: 100%;
   z-index: 50;
-  &::before{
+
+  &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -104,7 +122,8 @@ export default {
     z-index: 2;
 
   }
-  &__container{
+
+  &__container {
     position: relative;
     height: 100px;
     display: flex;
@@ -112,28 +131,35 @@ export default {
     align-items: center;
 
   }
-  &__burger{
+
+  &__burger {
     display: none;
   }
-  &__logo{
+
+  &__logo {
     z-index: 3;
-    .logo__img{
+
+    .logo__img {
       height: 70px;
     }
   }
-  &__info{
+
+  &__info {
     display: flex;
     align-items: center;
   }
-  &__menu{
+
+  &__menu {
 
     .menu-wrap {
       display: flex;
       position: relative;
       z-index: 2;
-      li{
+
+      li {
         list-style: none;
       }
+
       .menu__link {
         font-size: 18px;
         text-decoration: none;
@@ -142,7 +168,8 @@ export default {
         transition: 1s ease;
         position: relative;
         outline: none;
-        &::after{
+
+        &::after {
           content: " ";
           position: absolute;
           display: block;
@@ -154,7 +181,8 @@ export default {
           transition: width .3s ease-in-out;
           transform: translateX(-50%);
         }
-        &:hover::after{
+
+        &:hover::after {
           width: 100%;
         }
       }
@@ -163,40 +191,53 @@ export default {
 
 
   }
-  &__contact{
+
+  &__contact {
+
     width: 90px;
     height: 40px;
-    background: transparent;
-    outline: none;
     border: 2px solid #6b6b6b;
-    font-family: 'Popins';
-    font-size: 18px;
     margin-left: 15px;
     position: relative;
     z-index: 2;
+    a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      text-decoration: none;
+      outline: none;
+      font-family: 'Popins';
+      font-size: 18px;
+    }
 
   }
-  &__contacts__icon{
+
+  &__contacts__icon {
     display: none;
   }
 }
-@media screen and (max-width: 720px){
+
+@media screen and (max-width: 720px) {
   .header {
-    &__container{
+    &__container {
       height: 60px;
     }
-    &__logo{
-      .logo__img{
+
+    &__logo {
+      .logo__img {
         height: 40px;
       }
     }
-    &__burger{
+
+    &__burger {
       display: block;
       font-size: 30px;
       z-index: 3;
       cursor: pointer;
     }
-    &__menu{
+
+    &__menu {
       position: fixed;
       top: -120%;
       left: 0;
@@ -205,12 +246,15 @@ export default {
       background-color: #f0f0f0;
       padding: 100px 0 0 0;
       transition: all 0.3s ease 0s;
-      &.active{
+
+      &.active {
         top: 0;
       }
-      .menu-wrap{
+
+      .menu-wrap {
         display: block;
-        li{
+
+        li {
           margin: 0 0 20px 0;
           display: flex;
           justify-content: center;
@@ -222,10 +266,12 @@ export default {
         }
       }
     }
-    &__contact{
+
+    &__contact {
       display: none;
     }
-    &__contacts__icon{
+
+    &__contacts__icon {
       cursor: pointer;
       margin-right: 20px;
       display: block;

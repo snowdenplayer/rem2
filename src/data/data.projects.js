@@ -17,7 +17,7 @@ export const projectsData = [
     {
         id: 2,
         cardImg: require('../assets/images/kitchen3.jpg'),
-        title: "КУХНЯ",
+        title: "ПЛИТКА У КІМНАТАХ",
         description: "Ви можете спостерігати як перетворити доволі скромні квадратні метри на дуже приємну та комфортну ванну кімнату.",
         arrImg: [
             require('../assets/images/kitchen1.jpg'),
@@ -32,7 +32,16 @@ export const projectsData = [
         id: 3,
         cardImg: require('../assets/images/kitchen5.jpg'),
         title: "Вбиральня",
-        description: "Ви можете спостерігати як перетворити доволі скромні квадратні метри на дуже приємну та комфортну ванну кімнату."
+        description: "Ви можете спостерігати як перетворити доволі скромні квадратні метри " +
+            "на дуже приємну та комфортну ванну кімнату.",
+        arrImg: [
+            require('../assets/images/kitchen1.jpg'),
+            require('../assets/images/kitchen2.jpg'),
+            require('../assets/images/kitchen3.jpg'),
+            require('../assets/images/kitchen4.jpg'),
+            require('../assets/images/kitchen5.jpg'),
+            require('../assets/images/kitchen6.jpg'),
+        ]
 
     },
     {
