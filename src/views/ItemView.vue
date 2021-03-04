@@ -4,6 +4,7 @@
       :data="itemData.arrImg" class="viewCardGrid">
 
   </viewCardGrid>
+  <div class="itemView__text" v-html="itemData.textInProjects" />
 </div>
 </template>
 
@@ -32,8 +33,8 @@ name: "ItemView",
 
 <style scoped>
 .itemView{
-
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -41,5 +42,14 @@ name: "ItemView",
 .viewCardGrid{
   width: 90%;
 }
+.itemView__text{
+  margin: 20px 0;
+  width: 90%;
+  border: 2px solid #fec41d;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 25px;
+}
+
 
 </style>

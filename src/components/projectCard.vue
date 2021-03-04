@@ -102,7 +102,6 @@ export default {
 
     img {
       position: absolute;
-      top: -50%;
       width: 100%;
     }
 
@@ -149,7 +148,7 @@ export default {
     }
 
     &-left {
-      height: 100px;
+      height: 110px;
 
       &-header {
 

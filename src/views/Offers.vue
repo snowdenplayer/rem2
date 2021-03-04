@@ -6,15 +6,11 @@
     />
 
     <div class="offers__card"
-         v-for="(item,index) in offersArray"
+         v-for="(item) in offersArray"
          :key="item.id"
     >
       <div class="wrap__card"
-           :style="[
-               index !== offersArray.length-1 ? `background: linear-gradient(to ${item.direction}, #fec41d, #fff`: lastChild ,
-
-               ]"
-
+           :style="`background: linear-gradient(to ${item.direction}, #fec41d, #fff`"
       >
         <div class="offers__card-right"
              :style="`background-image: url(${item.bgImage})`"

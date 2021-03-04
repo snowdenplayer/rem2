@@ -1,18 +1,22 @@
 <template>
   <div class="popup">
     <div class="popup__header">
-      <span>Замовити зворотній звінок</span>
-      <span>
+      <p>Замовити зворотній дзвінок</p>
+      <p>
         <i class="material-icons" style="cursor: pointer" @click="closeModal">close</i>
-      </span>
+      </p>
     </div>
     <div class="popup__content">
       <form action="https://formspree.io/f/xknplyad" method="post" class="form-container">
-      <label for="email"><b>Ім'я</b></label>
-      <input type="text" placeholder="Ім'я" name="email" required>
+      <label for="name"><b>Ім'я</b></label>
+      <input type="text" placeholder="Ім'я" name="name" required>
 
-      <label for="psw"><b>Телефон</b></label>
-      <input type="tel" placeholder="+380509494349" name="psw"  required>
+      <label for="tel"><b>Телефон</b></label>
+      <input type="tel" placeholder="+380509494349" name="tel"  required>
+
+        <label for="coment"><b>Коментар за бажанням</b></label>
+        <input type="text" placeholder="Коментар" name="coment"  required>
+
         <button class="submit__button" type="submit" >Відправити</button>
       </form>
     </div>
@@ -48,6 +52,7 @@ export default {
   &__content{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     .form-container {
       max-width: 300px;
@@ -63,10 +68,15 @@ export default {
       background: #f1f1f1;
     }
 
-    /* When the inputs get focus, do something */
     .form-container input[type=text]:focus, .form-container input[type=tel]:focus {
       background-color: #ddd;
       outline: none;
+    }
+    .submit__button{
+      border: none;
+      padding: 8px;
+      color: #ffffff;
+      background: #fec41d;
     }
   }
   &__footer{
@@ -76,11 +86,7 @@ export default {
     button{
       border: none;
     }
-    .submit__button{
-      padding: 8px;
-      color: #ffffff;
-      background: #fec41d;
-    }
+
     .close_modal{
       padding: 8px;
       color: white;
