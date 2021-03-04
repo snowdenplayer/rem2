@@ -196,7 +196,7 @@ export default {
 
     width: 90px;
     height: 40px;
-    border: 2px solid #6b6b6b;
+    border: 2px solid #fec41d;
     margin-left: 15px;
     position: relative;
     z-index: 2;

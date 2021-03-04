@@ -12,7 +12,7 @@
             <a href="https://instagram.com/dima_voroshyk?igshid=1gsiscnmmrzmr" target="_blank">
               <img src="../assets/images/insta.png" alt=""></a>
           </div>
-          <div class="media__item viber"><a href="viber://chat?number=%2B380501728217" target="_blank"><img src="../assets/images/viber.png" alt=""></a></div>
+          <div class="media__item viber"><a href="viber://chat?number=%2B380501553777" target="_blank"><img src="../assets/images/viber.png" alt=""></a></div>
           <div class="media__item telegram"><a href="https://t.me/dimka8090" target="_blank"><img src="../assets/images/telegram.png" alt=""></a></div>
         </div>
       </div>
