@@ -3,8 +3,8 @@ export const projectsData = [
         id: 1,
         cardImg: require('../assets/images/bathroom/bathroom5.jpeg'),
         title: "ВАННА КІМНАТА У БУДИНКУ",
-        description: "Ви можете спостерігати як перетворити доволі скромні квадратні метри на дуже приємну" +
-            " та комфортну ванну кімнату.",
+        description: "На фото Ви можете спостерігати як перетворити доволі скромні квадратні метри"+
+        "на дуже приємну та комфортну ванну кімнату.",
         arrImg: [
             require('../assets/images/bathroom/bathroom2.jpeg'),
             require('../assets/images/bathroom/bathroom1.jpg'),
@@ -21,25 +21,27 @@ export const projectsData = [
     },
     {
         id: 2,
-        cardImg: require('../assets/images/plytkaVKimnatach/1.jpeg'),
-        title: "ПЛИТКА У КІМНАТАХ",
-        description: "Ви можете спостерігати як перетворити доволі скромні квадратні метри " +
-            "на дуже приємну та комфортну ванну кімнату.",
+        cardImg: require('../assets/images/plytkaPryVhodi/1.jpeg'),
+        title: "ПЛИТКА ПРИ ВХОДІ",
+        description: "Укладання плитки у будинку при вході.",
         arrImg: [
-            require('../assets/images/plytkaVKimnatach/1.jpeg'),
-            require('../assets/images/plytkaVKimnatach/4.jpeg'),
-            require('../assets/images/plytkaVKimnatach/2.jpeg'),
-            require('../assets/images/plytkaVKimnatach/5.jpeg'),
-            require('../assets/images/plytkaVKimnatach/3.jpeg'),
-            require('../assets/images/plytkaVKimnatach/6.jpeg'),
+            require('../assets/images/plytkaPryVhodi/6.jpeg'),
+            require('../assets/images/plytkaPryVhodi/2.jpeg'),
+            require('../assets/images/plytkaPryVhodi/3.jpeg'),
+            require('../assets/images/plytkaPryVhodi/4.jpeg'),
+            require('../assets/images/plytkaPryVhodi/5.jpeg'),
+            require('../assets/images/plytkaPryVhodi/1.jpeg'),
         ],
-        textInProjects: `<span>Укладання плитки</span> на новому проєкті. 
-            На фото Ви можете детально спостерігати наскільки кропіткою є ця робота,
-            а що головне — точною. Саме тому важливо виконати весь обсяг завдань грамотно, щоб пізніше 
-            не пожалкувати про наслідки. 
-            У цьому конкретному випадку була доволі велика та якісна плитка, тому робота йшла легко.`
-
+        textInProjects: `
+        <span>Керамограніт</span> наразі залишається <span>лідером</span> за збалансованістю 
+        показників трендів та надійності 
+        серед будівельних матеріалів. Ця плитка здатна вносити свіжий подих у будь-який будинок, 
+        адже має сучасний дизайн, який різниться один від одного. На фото була проведена робота 
+        із великими зразками(60х60). 
+        Такий варіант чудово підходить для широких просторів та відкритих ділянок.
+        `
     },
+
     {
         id: 3,
         cardImg: require('../assets/images/bathroomSuperNova/2.jpeg'),
@@ -66,8 +68,9 @@ export const projectsData = [
         id: 4,
         cardImg: require('../assets/images/kitchenSuperNova/2.jpeg'),
         title: "КУХНЯ ЖК «СУПЕРНОВА»",
-        description: "Ви можете спостерігати як перетворити доволі" +
-            " скромні квадратні метри на дуже приємну та комфортну ванну кімнату.",
+        description: "У цій кімнаті важливо було зберегти загальний інтер‘єр оселі та " +
+            "зробити його більш практичним,"+
+        "оскільки кухня — це місце і готування, і відпочинку.",
         arrImg: [
             require('../assets/images/kitchenSuperNova/1.jpeg'),
             require('../assets/images/kitchenSuperNova/2.jpeg'),
@@ -87,32 +90,31 @@ export const projectsData = [
     },
     {
         id: 5,
-        cardImg: require('../assets/images/plytkaPryVhodi/1.jpeg'),
-        title: "ПЛИТКА ПРИ ВХОДІ",
-        description: "Ви можете спостерігати як перетворити доволі" +
-            " скромні квадратні метри на дуже приємну та комфортну ванну кімнату.",
+        cardImg: require('../assets/images/korydor/1.jpg'),
+        title: "КОРИДОР ТА КУХНЯ",
+        description: "Ремонтна робота у коридорі та кухні у квартирі.",
         arrImg: [
-            require('../assets/images/plytkaPryVhodi/6.jpeg'),
-            require('../assets/images/plytkaPryVhodi/2.jpeg'),
-            require('../assets/images/plytkaPryVhodi/3.jpeg'),
-            require('../assets/images/plytkaPryVhodi/4.jpeg'),
-            require('../assets/images/plytkaPryVhodi/5.jpeg'),
-            require('../assets/images/plytkaPryVhodi/1.jpeg'),
+            require('../assets/images/korydor/1.jpg'),
+            require('../assets/images/korydor/2.jpg'),
+            require('../assets/images/korydor/5.jpg'),
+            require('../assets/images/korydor/4.jpg'),
+            require('../assets/images/korydor/3.jpg'),
+            require('../assets/images/korydor/6.jpg'),
         ],
         textInProjects: `
-        <span>Керамограніт</span> наразі залишається <span>лідером</span> за збалансованістю показників трендів та надійності 
-        серед будівельних матеріалів. Ця плитка здатна вносити свіжий подих у будь-який будинок, 
-        адже має сучасний дизайн, який різниться один від одного. На фото була проведена робота 
-        із великими зразками(60х60). 
-        Такий варіант чудово підходить для широких просторів та відкритих ділянок.
+        Ремонтна робота у <span>коридорі</span> та <span>кухні</span>. Дуже великі об‘єми роботи були проведені, 
+        та головне задоволений клієнт, який зумів побачити наяву усе, чого бажав до цього. 
+        Тут і якісне поєднання різної плитки та облицювання, і навіть LED-підсвітка. 
+        Загалом кухня та коридор вийшли після плідної співпраці майстрів та замовників.
         `
     },
+
+
     {
         id: 6,
         cardImg: require('../assets/images/bathroom2/1.jpeg'),
         title: "ВАННА КІМНАТА У КВАРТИРІ",
-        description: "Ви можете спостерігати як перетворити доволі" +
-            " скромні квадратні метри на дуже приємну та комфортну ванну кімнату.",
+        description: "Модерна ванна кімната у достатньо просторому місці.",
         arrImg: [
             require('../assets/images/bathroom2/6.jpeg'),
             require('../assets/images/bathroom2/5.jpeg'),
@@ -128,4 +130,26 @@ export const projectsData = [
         Що головне, так це робота майстра, який скомпонував усі об‘єкти разом та створив чудовий результат.
         `
     },
+    {
+        id: 7,
+        cardImg: require('../assets/images/plytkaVKimnatach/1.jpeg'),
+        title: "ПЛИТКА У КІМНАТАХ",
+        description: "На фото Ви можете детально спостерігати наскільки кропіткою є ця робота,"+
+            "а що головне — точною.",
+        arrImg: [
+            require('../assets/images/plytkaVKimnatach/1.jpeg'),
+            require('../assets/images/plytkaVKimnatach/4.jpeg'),
+            require('../assets/images/plytkaVKimnatach/2.jpeg'),
+            require('../assets/images/plytkaVKimnatach/5.jpeg'),
+            require('../assets/images/plytkaVKimnatach/3.jpeg'),
+            require('../assets/images/plytkaVKimnatach/6.jpeg'),
+        ],
+        textInProjects: `<span>Укладання плитки</span> на новому проєкті. 
+            На фото Ви можете детально спостерігати наскільки кропіткою є ця робота,
+            а що головне — точною. Саме тому важливо виконати весь обсяг завдань грамотно, щоб пізніше 
+            не пожалкувати про наслідки. 
+            У цьому конкретному випадку була доволі велика та якісна плитка, тому робота йшла легко.`
+
+    },
+
 ]

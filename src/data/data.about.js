@@ -1,9 +1,11 @@
 export const aboutData = [
-    require('../assets/images/stairs.jpg'),
-    require('../assets/images/vana2.jpg'),
-    require('../assets/images/vana3.jpg'),
-    require('../assets/images/stairs.jpg'),
-    require('../assets/images/vana2.jpg'),
-    require('../assets/images/vana3.jpg'),
+
+
+    require('../assets/images/plytkaPryVhodi/3.jpeg'),
+    require('../assets/images/kitchenSuperNova/6.jpeg'),
+    require('../assets/images/bathroomSuperNova/2.jpeg'),
+    require('../assets/images/bathroom/bathroom5.jpeg'),
+    require('../assets/images/bathroom2/1.jpeg'),
+    require('../assets/images/korydor/2.jpg'),
 
 ]

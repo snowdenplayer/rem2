@@ -21,7 +21,7 @@
             <ul class="menu-wrap">
               <li v-for="(menu,index) in headerMenuList" :key="index" @click=" show = !show">
                 <router-link :to="menu.path" class="menu__link">
-                  {{ menu.name }}
+                  {{ menu.name.toUpperCase() }}
                 </router-link>
               </li>
             </ul>
@@ -44,7 +44,7 @@ export default {
       headerMenuList: [
         {name: 'Головна', path: '/'},
         {name: 'Про нас', path: '/about'},
-        {name: 'Проэкти', path: '/projects'},
+        {name: 'Проєкти', path: '/projects'},
         {name: 'Послуги', path: '/offers'},
       ],
       show: false
