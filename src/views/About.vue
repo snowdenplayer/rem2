@@ -1,10 +1,8 @@
 <template>
   <div class="about">
-
     <div class="container">
       <viewCardGrid
           :data="imgArr">
-
       </viewCardGrid>
       <div class="wrap__menu">
         <ul class="menu">
@@ -18,7 +16,20 @@
           </li>
         </ul>
       </div>
-
+      <div class="about__text">Ми <span>ремонтна компанія</span>, яка успішно функціонує більше <span>3-х років</span>.
+        За цей час у нас уже було з декілька десятків об‘єктів, які залишили своїй власників повністю задоволеними.
+        Ми проводимо ремонтні роботи у новобудовах, старіших квартирах та будинках. Окрім комплексних робіт,
+        ми також маємо можливість зробити окремий ремонт проблемної кімнати. <br><br>
+        Наша головна мета це
+        зменшити до мінімуму стрес клієнтів при ремонті Вашої оселі та зробити усе можливе, щоб
+        фінальний результат приніс Вам лише позитивні емоції. За таким мотивом ми і працюємо
+        увесь цей час. У цьому нам допомагають <span>кваліфіковані майстри</span>, які щоразу оновлюють методики
+        праці згідно нових тенденцій, а також нові інструменти, які лише допомагають пришвидшити роботу
+        та виконати усе вчасно. <br><br>
+        Після роботи ми завжди залишаємо місце чистим, тому що дбаємо не тільки
+        за функціональний стан речей, а й за естетичним виглядом оселі. Ми будемо раді зробити комофортним
+        і Ваш дім, тому якщо готові до співпраці — <span>заповнюйте заявку</span>, дзвоніть нам за телефоном та слідкуйте
+        за нами у соціальних мережах.</div>
     </div>
   </div>
 </template>
@@ -26,7 +37,6 @@
 import viewCardGrid from "../components/viewCardGrid";
 import {aboutData} from "../data/data.about"
 export default {
-
   name: "About",
   data(){
     return{
@@ -68,14 +78,10 @@ export default {
   components: {
     viewCardGrid
   },
-  methods:{
-
-  }
 }
 </script>
 <style scoped lang="scss">
 @import '../assets/styles/index';
-
 .about{
   display: flex;
   justify-content: center;
@@ -89,7 +95,6 @@ export default {
   .wrap__menu{
     display: flex;
     justify-content: center;
-
     .menu{
       display: flex;
       flex-direction: row;
@@ -107,11 +112,19 @@ export default {
           height: 75px;
           margin-bottom: 25px;
         }
-        p{
-
-        }
-
       }
+    }
+  }
+  &__text{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+    br{
+      margin-bottom: 10px;
+    }
+    span{
+      font-weight: bolder;
     }
   }
 }
@@ -123,10 +136,6 @@ export default {
         width: 50%!important;
       }
     }
-
   }
-
-
 }
-
 </style>

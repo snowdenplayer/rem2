@@ -13,9 +13,7 @@
      <img :src="data.cardImg" alt=""/>
     </div>
   </router-link>
-
 </template>
-
 <script>
 export default {
   name: "projectCard",
@@ -31,7 +29,6 @@ export default {
   }
 }
 </script>
-
 <style scoped lang="scss">
 .projects-wrap__item {
   text-decoration: none;
@@ -40,38 +37,30 @@ export default {
   width: 90%;
   display: flex;
   margin-bottom: 3px;
-
   &-right, &-left {
     width: 50%;
     height: 170px;
     box-sizing: border-box;
-
   }
-
   &-left {
     padding: 30px 20px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     &-header {
       text-decoration: none;
       font-size: 20px;
       font-family: 'OpenSansBold', sans-serif;
-
     }
-
     &-text {
       font-size: 14px;
     }
-
     .arrow {
       width: 50px;
       height: 2px;
       background: black;
       position: relative;
-
       &::after {
         content: "";
         position: absolute;
@@ -82,7 +71,6 @@ export default {
         right: -1px;
         transform: rotate(25deg);
       }
-
       &::before {
         content: "";
         position: absolute;
@@ -95,71 +83,48 @@ export default {
       }
     }
   }
-
   &-right {
     overflow: hidden;
     position: relative;
-
     img {
       position: absolute;
       width: 100%;
     }
-
   }
 }
-
-
 @media screen and (max-width: 720px) {
   .projects {
     &-wrap {
       padding-top: 0;
-
       &__item {
         flex-direction: column;
         align-items: center;
-
         &-right, &-left {
           width: 70%;
         }
-
         &-left {
-          &-header {
-
-          }
-
           &-text {
             font-size: 14px;
           }
         }
       }
-
     }
   }
-
 }
 
 @media screen and (max-width: 480px) {
   .projects-wrap__item {
     flex-direction: column;
     align-items: center;
-
     &-right, &-left {
       width: 90%;
     }
-
     &-left {
       height: 110px;
-
-      &-header {
-
-      }
-
       &-text {
         display: none;
       }
     }
   }
 }
-
-
 </style>

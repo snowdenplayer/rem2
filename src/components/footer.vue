@@ -53,18 +53,15 @@ name: "footer"
     align-items: center;
     justify-content: space-between;
     height: 80px;
-
   }
   &__info{
     display: flex;
     justify-content: space-between;
-
     .footer__logo{
       width: 100px;
       height: 100%;
     }
     .media__item{
-
       img{
         width: 30px;
         height: 30px;
@@ -79,7 +76,6 @@ name: "footer"
     }
   }
   &__menu{
-    /*align-self: flex-start;*/
     &-list{
       display: flex;
       flex-direction: row;
@@ -87,7 +83,6 @@ name: "footer"
         margin: 0 30px;
       }
       &-item{
-
         font-size: 16px;
         text-decoration: none;
         text-transform: uppercase;
@@ -107,7 +102,6 @@ name: "footer"
       color: #fff;
       font-size: 17px;
       font-family: 'OpenSansBold',sans-serif;
-
     }
     &-email{
       margin-top: 10px;

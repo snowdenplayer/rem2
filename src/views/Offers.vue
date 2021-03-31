@@ -31,9 +31,7 @@
              v-if="item.direction === 'left' ">
         </div>
       </div>
-
     </div>
-
   </div>
 </template>
 
@@ -55,7 +53,6 @@ export default {
   },
   methods: {
     showPopUpInfo() {
-      console.log(this.widthScreen)
       this.isInfoPopUpVisible = true
     },
     closeModal() {
@@ -80,9 +77,7 @@ h3 {
 }
 
 .lastChild {
-
   background: red;
-
 }
 
 .offers {
@@ -90,21 +85,16 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
   &__card {
     height: calc(100vh);
     width: 95%;
     display: flex;
-
     .wrap__card {
       display: flex;
     }
-
     .offers__card-left, .offers__card-right {
       height: calc(100% - 100px);
     }
-
     &-right {
       width: 60%;
       background-position: center;
@@ -196,7 +186,7 @@ h3 {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.6);
         z-index: 1;
       }
     }

@@ -1,14 +1,10 @@
 <template>
 <div class="viewCardGrid">
-
-
-
   <div v-for="(item,index) in data"
           :key="index"
           :class='getClassLink(index)'>
     <img :src="item" alt="" class="gallery__img">
   </div>
-
 </div>
 </template>
 
@@ -25,11 +21,8 @@ name: "viewCardGrid",
       return 'gallery__item--'+index;
     }
   }
-
 }
-
 </script>
-
 <style scoped lang="scss">
 @import '../assets/styles/index';
 .viewCardGrid{
@@ -50,35 +43,30 @@ name: "viewCardGrid",
   grid-row-start: 1;
   grid-row-end: 3;
 }
-
 .gallery__item--1 {
   grid-column-start: 3;
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 3;
 }
-
 .gallery__item--2 {
   grid-column-start: 5;
   grid-column-end: 9;
   grid-row-start: 1;
   grid-row-end: 6;
 }
-
 .gallery__item--3 {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 6;
 }
-
 .gallery__item--4 {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 6;
   grid-row-end: 9;
 }
-
 .gallery__item--5 {
   grid-column-start: 5;
   grid-column-end: 9;
@@ -93,6 +81,5 @@ name: "viewCardGrid",
   .gallery__img{
     height: 200px;
   }
-
 }
 </style>

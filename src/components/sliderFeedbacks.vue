@@ -1,7 +1,6 @@
 <template>
   <div class="sliderFeed">
     <splide :options="options">
-
       <splide-slide
           v-for="(person, idx) in feedbacks"
           :key="idx"
@@ -49,19 +48,16 @@ export default {
   }
 }
 </script>
-
 <style lang="scss">
 .sliderFeed {
   width: 100%;
   splide-slide .is-activeCard{
     border: 1px solid black;
   }
-
 }
 .splide__slide.is-active{
   background: rgba(254,196,29,0.3);
 }
-
 .slide__content {
   padding: 10px;
   display: flex;

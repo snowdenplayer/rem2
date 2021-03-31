@@ -5,7 +5,6 @@
         <div class="wrap__info">
           <div class="our__logo">Ремонтна <br> компанія</div>
           <div class="our__text">Робимо Ваші оселі комфортними<br>більше 3-х років</div>
-
           <div class="our__button">
             <router-link to="/about" class="our__link">Про нас</router-link>
           </div>
@@ -37,7 +36,6 @@
     </section>
   </div>
 </template>
-
 <script>
 import sliderFeedBacks from "../components/sliderFeedbacks"
 
@@ -294,9 +292,11 @@ export default {
 .slider{
   display: flex;
   justify-content: center;
+
   &__container{
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
   }
   &__header{
     margin-top: 0.5em;
