@@ -31,6 +31,7 @@
     </section>
     <section class="slider">
       <div class="slider__container container">
+        <h1 class="slider__header container__header">Відгуки клієнтів</h1>
         <sliderFeedBacks></sliderFeedBacks>
       </div>
     </section>
@@ -294,7 +295,14 @@ export default {
   display: flex;
   justify-content: center;
   &__container{
-    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  &__header{
+    margin-top: 0.5em;
+    letter-spacing: -1px;
+    align-self: center;
+    justify-self: center;
   }
 }
 

@@ -18,7 +18,6 @@
 
 <script>
 import {Splide, SplideSlide} from '@splidejs/vue-splide';
-//import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import '@splidejs/splide/dist/css/themes/splide-sea-green.min.css';
 import {feedbacks} from "@/data/data.feedback"
 
@@ -28,10 +27,10 @@ export default {
     return {
       options: {
         type: 'loop',
-        rewind: true,
         gap: '1rem',
         perPage: 3,
         perMove: 1,
+        focus  : 'center',
         breakpoints: {
           991: {
             perPage: 2,
@@ -54,9 +53,17 @@ export default {
 <style lang="scss">
 .sliderFeed {
   width: 100%;
+  splide-slide .is-activeCard{
+    border: 1px solid black;
+  }
+
+}
+.splide__slide.is-active{
+  background: rgba(254,196,29,0.3);
 }
 
 .slide__content {
+  padding: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -75,6 +82,9 @@ export default {
     line-height: 20px;
   }
 }
-
-
+@media screen and (max-width: 767px){
+  .splide__slide{
+    background: rgba(254,196,29,0.3);
+  }
+}
 </style>
