@@ -7,7 +7,7 @@
       </p>
     </div>
     <div class="popup__content">
-      <form action="https://formspree.io/f/xknplyad" method="post" class="form-container">
+      <form action="https://formspree.io/f/mayayjje" method="post" class="form-container">
       <label for="name"><b>Ім'я</b></label>
       <input type="text" placeholder="Ім'я" name="name" required>
       <label for="tel"><b>Телефон</b></label>

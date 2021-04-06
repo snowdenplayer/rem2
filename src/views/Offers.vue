@@ -67,6 +67,16 @@ export default {
     window.addEventListener('resize', this.updateWidth);
     console.log(this.width)
   },
+  watch: {
+    isInfoPopUpVisible: function () {
+      if (this.isInfoPopUpVisible) {
+        document.documentElement.style.overflow = 'hidden'
+      } else {
+        document.documentElement.style.overflow = 'auto'
+      }
+
+    }
+  }
 }
 </script>
 
