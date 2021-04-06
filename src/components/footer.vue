@@ -59,7 +59,6 @@ name: "footer"
     justify-content: space-between;
     .footer__logo{
       width: 100px;
-      height: 100%;
     }
     .media__item{
       img{
