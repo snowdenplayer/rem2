@@ -1,10 +1,14 @@
 <template>
   <div class="home">
+    <v-pop-up
+        v-if="isInfoPopUpVisible"
+        @closePopUp="closeModal"
+    />
     <section class="our">
       <div class="our__container container">
         <div class="wrap__info">
           <div class="our__logo">Компанія <br> <span>REM2</span></div>
-          <div class="our__text">Робимо оселі комфортними<br>більше 3-х років</div>
+          <div class="our__text">Робимо ваші оселі комфортними</div>
           <div class="our__button">
             <router-link to="/about" class="our__link">Про нас</router-link>
           </div>
@@ -30,6 +34,11 @@
         </div>
       </div>
     </section>
+    <section class="home-service">
+      <div class="home-service__container container">
+        <button class="home-service__button" @click="isInfoPopUpVisible = !isInfoPopUpVisible">замовити</button>
+      </div>
+    </section>
     <section class="slider">
       <div class="slider__container container">
         <h1 class="slider__header container__header">Відгуки клієнтів</h1>
@@ -40,18 +49,41 @@
 </template>
 <script>
 import sliderFeedBacks from "../components/sliderFeedbacks"
-
+import vPopUp from '@/components/popup'
 export default {
   name: 'Home',
+  data() {
+    return {
+      isInfoPopUpVisible: false
+    }
+  },
   components: {
-    sliderFeedBacks
+    sliderFeedBacks,
+    vPopUp,
+  },
+  methods: {
+    closeModal() {
+      this.isInfoPopUpVisible = false
+    }
+  },
+  watch: {
+    isInfoPopUpVisible() {
+      if (this.isInfoPopUpVisible) {
+        document.documentElement.style.overflow = 'hidden'
+      } else {
+        document.documentElement.style.overflow = 'auto'
+      }
+
+    }
   }
 }
 </script>
 
 <style scoped lang="scss">
 @import "../assets/styles/index";
-
+.home {
+  position: relative;
+}
 .our {
   padding-top: 100px;
   background-image: url("../assets/images/sectionONas.jpg");
@@ -99,6 +131,24 @@ export default {
       color: black;
       font-weight: bolder;
     }
+  }
+}
+.home-service {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  .home-service__container {
+    display: flex;
+    justify-content: center;
+  }
+  .home-service__button {
+    color: white;
+    font-family: Arial;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 15px 50px;
+    border: 2px solid #fec41d;
+    background: #fec41d;
   }
 }
 
@@ -279,11 +329,19 @@ export default {
 
       margin-bottom: 0px;
     }
-
+    .experience__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     &__boxes {
       flex-direction: column;
       border: none;
       width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
       .box {
         width: 100%;
