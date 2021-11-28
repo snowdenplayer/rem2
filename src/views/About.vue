@@ -117,7 +117,7 @@ export default {
   }
   &__text{
     margin-top: 10px;
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     line-height: 30px;
     br{

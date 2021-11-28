@@ -3,8 +3,8 @@
     <section class="our">
       <div class="our__container container">
         <div class="wrap__info">
-          <div class="our__logo">Ремонтна <br> компанія</div>
-          <div class="our__text">Робимо Ваші оселі комфортними<br>більше 3-х років</div>
+          <div class="our__logo">Компанія <br> <span>REM2</span></div>
+          <div class="our__text">Робимо оселі комфортними<br>більше 3-х років</div>
           <div class="our__button">
             <router-link to="/about" class="our__link">Про нас</router-link>
           </div>
@@ -13,17 +13,19 @@
     </section>
     <section class="experience">
       <div class="experience__container container">
-        <h1 class="experience__header container__header">Наші переваги</h1>
-        <div class="experience__boxes">
-          <div class="box box-white">
-            <div class="num">30+</div>
-            зданих <br> проєктів
-          </div>
-          <div class="box box-yellow">Лише<br>якісні<br>інструменти</div>
-          <div class="box box-dark">Працюємо<br>з<br>гарантією</div>
-          <div class="box box-gray">
-            <div class="num">3+</div>
-            роки <br> досвіду
+        <div class="experience__wrapper">
+          <h1 class="experience__header container__header">Наші особливості</h1>
+          <div class="experience__boxes">
+            <div class="box box-white">
+              <div class="num">30+</div>
+              зданих <br> проєктів
+            </div>
+            <div class="box box-yellow">Сучасні<br>інструменти</div>
+            <div class="box box-dark">Даємо<br>гарантію</div>
+            <div class="box box-gray">
+              <div class="num">3+</div>
+              роки <br> досвіду
+            </div>
           </div>
         </div>
       </div>
@@ -71,6 +73,9 @@ export default {
   &__logo {
     font-family: arial;
     font-size: 60px;
+    span {
+      font-size: 56px;
+    }
   }
 
   &__text {
@@ -177,7 +182,8 @@ export default {
   box-sizing: border-box;
 
   &__header {
-    margin-bottom: -50px;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   &__container {
@@ -190,12 +196,12 @@ export default {
   &__boxes {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
+    max-width: 600px;
     border: 5px solid white;
 
     .box {
       box-sizing: border-box;
-      width: 200px;
+      width: 300px;
       height: 200px;
       display: flex;
       align-items: center;
